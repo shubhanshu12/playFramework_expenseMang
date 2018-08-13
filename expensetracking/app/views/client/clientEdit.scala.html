@@ -1,0 +1,39 @@
+@(title: String)(id: Long)(form: Form[dto.ClientDTO])
+
+@header(title)
+@left()
+
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+		<div id="page-wrapper" style="min-height: 759px;">
+			<div class="main-page">
+				<div class="widget-shadow " data-example-id="basic-forms">
+					<div class="form-title">
+						<h4>Edit Expense</h4>
+					</div>
+					<div class="form-body">
+						<div class="form-horizontal">
+							<div class="form-group">
+								@helper.form(routes.ClientController.updateClient(id)) {
+								<div class="col-sm-9">
+									 @helper.inputText(form("Name"),'class -> "form-control")
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-9">	
+									@helper.inputText(form("City"),'class -> "form-control")
+								</div>
+							</div>
+							<div class="col-sm-offset-2">
+								<button type="submit" class="btn btn-default">Submit</button>
+							</div>
+    }
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+						
+@footer()

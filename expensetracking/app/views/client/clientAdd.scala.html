@@ -1,0 +1,30 @@
+@(form: Form[dto.ClientDTO])
+
+			
+<div class="widget-shadow " data-example-id="basic-forms">
+	<div class="form-title">
+		<h4>Add Client</h4>
+	</div>
+	<div class="form-body">
+		<div class="form-horizontal">
+			<div class="form-group">
+						@helper.form(routes.ClientController.submit) {
+							
+				<div class="col-sm-9">
+							 @helper.inputText(form("Name"),'class -> "form-control")
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">	
+							@helper.inputText(form("City"),'class -> "form-control")
+				</div>
+			</div>
+			<div class="col-sm-offset-2">
+				<button type="submit" class="btn btn-default">Submit</button>
+			</div>
+    }
+		</div>
+	</div>
+</div>
+
+

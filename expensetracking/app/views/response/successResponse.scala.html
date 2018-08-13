@@ -1,0 +1,41 @@
+@(cond: String, response: String)
+
+@header("Response")
+@left()
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+	<div id="page-wrapper" style="min-height: 759px;">
+			<div class="main-page">
+	
+				<div class="grid_3 grid_5 widget-shadow">
+				
+					@if(cond =="SUCCESS"){
+					<div class="alert alert-success" role="alert">
+						@response
+					</div>
+					}
+					
+					@if(cond == "INFO"){
+					<div class="alert alert-info" role="alert">
+						@response
+					</div>
+					}
+					
+					@if(cond == "WARN"){
+					<div class="alert alert-warning" role="alert">
+						@response
+					</div>
+					}
+					@if(cond == "DANGER"){
+					<div class="alert alert-danger" role="alert">
+						@response
+					</div>
+					}
+				
+				</div>
+	</div>
+	</div>
+	</div>
+
+</body>
+@footer()
